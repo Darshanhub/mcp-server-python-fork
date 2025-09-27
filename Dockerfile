@@ -16,6 +16,18 @@ COPY uv.lock uv.lock
 # Install the project's dependencies using the lockfile and settings
 RUN uv sync --frozen --no-install-project --no-dev
 
+RUN cd ..
+RUN ls -la
+
+
+RUN cd ..
+RUN ls -la
+
+RUN cd ..
+RUN ls -la
+RUN cd ..
+RUN ls -la
+
 # Then, add the rest of the project source code and install it
 # Installing separately from its dependencies allows optimal layer caching
 ADD . /app
